@@ -76,6 +76,7 @@ imagery.on('postcompose', function(event) {
   var context = event.context;
   context.save();
 
+  context.scale(frameState.pixelRatio, frameState.pixelRatio);
   context.translate(origin[0], origin[1]);
   context.rotate(rotation);
   context.drawImage(video, 0, 0, dx / resolution, height / resolution);
